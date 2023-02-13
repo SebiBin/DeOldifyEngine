@@ -85,6 +85,7 @@ foreach (var fileName in filesToConvert)
     
     Console.WriteLine($"Start colorize:\t{DateTime.Now.TimeOfDay:hh\\:mm\\:ss\\:fff} \t\t\t\t\t {fileInfo.Name}");
     
+    stopWatch.Reset();
     stopWatch.Start();
     deOldifyEngine.Colorize(fileName, colorFile);
     stopWatch.Stop();
