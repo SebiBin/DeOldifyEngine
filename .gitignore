@@ -1,0 +1,7 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/DeOldifyEngine/models/Artistic.model
+/DeOldifyEngine/models/Stable.model

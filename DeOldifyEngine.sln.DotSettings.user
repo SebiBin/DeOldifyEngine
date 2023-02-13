@@ -1,0 +1,17 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002Fusr_002Flib64_002Fdotnet_002Fpacks_002FNETStandard_002ELibrary_002ERef_002F2_002E1_002E0_002Fref_002Fnetstandard2_002E1_002FSystem_002EDrawing_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/home/sebibin/.nuget/packages/corecompat.system.drawing/1.0.0-beta006/lib/netstandard1.3/CoreCompat.System.Drawing.dll" /&gt;
+  &lt;Assembly Path="/usr/lib64/dotnet/packs/Microsoft.NETCore.App.Ref/7.0.2/ref/net7.0/Microsoft.CSharp.dll" /&gt;
+  &lt;Assembly Path="/home/sebibin/_repos/DeOldifyEngine/DeOldifyEngine/DeOldifyEngine/bin/Debug/net7.0/DeOldifyEngine.dll" /&gt;
+  &lt;Assembly Path="/home/sebibin/.nuget/packages/netstandard.library/2.0.3/build/netstandard2.0/ref/System.Drawing.Primitives.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	
+	
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=ckpt/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=downsample/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Oldify/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=shuf/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=strided/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
