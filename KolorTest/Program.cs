@@ -3,6 +3,7 @@ using DeOldifyEngine;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 
+
 var builder = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false);
@@ -42,21 +43,35 @@ deOldifyEngine.Initialize(modelsDirectoryPath);
 Console.WriteLine("Initialized.");
 
 var stopWatch = new Stopwatch();
-var filesToConvert = Directory.GetFiles(exeDirectoryPath, @"TestFiles/*.jpg");
 
 Console.WriteLine("");
-Console.WriteLine($"Colorize files in: {exeDirectoryPath}TestFiles/");
+var filesToConvert = Directory.GetFiles(exeDirectoryPath, @"TestFiles/pict*.*");
+if (args.Length > 0 && Directory.Exists(args[0]))
+{
+    filesToConvert = Directory.GetFiles(args[0]);
+    Console.WriteLine($"Colorize files in: {args[0]}");
+}
+else
+{
+    Console.WriteLine($"Colorize files in: {exeDirectoryPath}/TestFiles/");
+}
+
+
 foreach (var fileName in filesToConvert)
 {
     var fileInfo = new FileInfo(fileName);
-    var colorFile = Path.Combine(fileInfo.DirectoryName, $"{fileInfo.Name}-color{fileInfo.Extension}");
-    Console.WriteLine($"Colorize: {fileInfo.Name}");
+    var fileNameWithoutExt = String.Concat(fileInfo.Name.Take(fileInfo.Name.Length - fileInfo.Extension.Length));
+    var newFileName = $"{fileNameWithoutExt}-color{fileInfo.Extension}";
+    var colorFile = Path.Combine(fileInfo.DirectoryName, newFileName);
+    
+    Console.WriteLine($"Start colorize:\t{DateTime.Now.TimeOfDay:hh\\:mm\\:ss\\:fff} \t\t\t\t\t {fileInfo.Name}");
     
     stopWatch.Start();
     deOldifyEngine.Colorize(fileName, colorFile);
     stopWatch.Stop();
     
-    Console.WriteLine($"Elapsed time {stopWatch.Elapsed}\t  for {fileName}");
+    Console.WriteLine($"End colorize: \t{DateTime.Now.TimeOfDay:hh\\:mm\\:ss\\:fff} \t Elapsed time:\t{stopWatch.Elapsed:hh\\:mm\\:ss\\:fff} \t {newFileName}");
+    Console.WriteLine("");
 }
 
 
