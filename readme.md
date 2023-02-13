@@ -12,8 +12,20 @@ and copy it into **DeOldifyEngine/models**
 
 **DeOldifyEngine** Runs on Windows and Linux
 
+# Input black and white files
 
-# Example results
+![](KolorTest/TestFiles/pict0.jpg)
+![](KolorTest/TestFiles/pict1.jpg)
+![](KolorTest/TestFiles/pict2.webp)
+![](KolorTest/TestFiles/pict3.jpg)
+![](KolorTest/TestFiles/pict4.jpg)
+![](KolorTest/TestFiles/pict5.webp)
+![](KolorTest/TestFiles/pict6.jpg)
+![](KolorTest/TestFiles/pict8.jpg)
+![](KolorTest/TestFiles/pict9.jpg)
+
+
+# Example color results
 
 ![](ExampleResults/pict0.jpg-color.jpg)
 ![](ExampleResults/pict1.jpg-color.jpg)
