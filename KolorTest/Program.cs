@@ -70,7 +70,8 @@ foreach (var fileName in filesToConvert)
     deOldifyEngine.Colorize(fileName, colorFile);
     stopWatch.Stop();
     
-    Console.WriteLine($"End colorize: \t{DateTime.Now.TimeOfDay:hh\\:mm\\:ss\\:fff} \t Elapsed time:\t{stopWatch.Elapsed:hh\\:mm\\:ss\\:fff} \t {newFileName}");
+    Console.WriteLine(
+        $"End colorize: \t{DateTime.Now.TimeOfDay:hh\\:mm\\:ss\\:fff} \t Elapsed time:\t{stopWatch.Elapsed:hh\\:mm\\:ss\\:fff} \t {newFileName}");
     Console.WriteLine("");
 }
 
