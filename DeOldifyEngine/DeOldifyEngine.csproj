@@ -16,10 +16,10 @@
     <ItemGroup>
       <None Remove="empty_32_bit_x8r8g8b8.bmp" />
       <None Update="models\Artistic.model">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </None>
       <None Update="models\Stable.model">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 

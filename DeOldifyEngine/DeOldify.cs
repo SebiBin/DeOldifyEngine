@@ -38,6 +38,8 @@ public unsafe partial class DeOldify
     public bool Stable { get; private set; }
     
     public bool Half { get; private set; }
+    
+    public string ModelsPath { get; private set; }
 
     ///<summary>
     /// Progress bar changer.
@@ -54,8 +56,9 @@ public unsafe partial class DeOldify
     /// </summary>
     /// <param name="stable">true to init stable model otherwise artistic model</param>
     /// <param name="half">true for 32 bit default is false</param>
-    public void Initialize(bool stable = true, bool half = false)
+    public void Initialize(string modelsPath,  bool stable = true, bool half = false)
     {
+        ModelsPath = modelsPath;
         Stable = stable;
         Half = half;
         
@@ -100,8 +103,7 @@ public unsafe partial class DeOldify
           (false, false) => "Artistic.model",  
         } ;
         
-        var executingPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        var modelPath = Path.Combine(executingPath!, "models" , fileName);
+        var modelPath = Path.Combine(ModelsPath , fileName);
         var binaryReader = new BinaryReader(new FileStream(modelPath, FileMode.Open, FileAccess.Read));
 
         return binaryReader;
